@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project company="GlobalBank" name="GlobalBank Exchange - Gestion des devises">
+  <description>Application bancaire de gestion des devises et taux de change - Version corrigée avec dates réalistes</description>
+  
+  <resources>
+    <resource id="1" name="Développeur Backend"/>
+    <resource id="2" name="Développeur Frontend"/>
+    <resource id="3" name="Designer UI/UX"/>
+    <resource id="4" name="Testeur QA"/>
+    <resource id="5" name="Chef de projet"/>
+  </resources>
+
+  <tasks>
+    <!-- ========== PHASE 1: INITIALISATION (4-7 mai 2026) ========== -->
+    <task id="1" name="01. PHASE 1: INITIALISATION">
+      <task id="2" name="01.1 Analyse des besoins">
+        <duration>1</duration>
+        <start>2026-05-04</start>
+      </task>
+      <task id="3" name="01.2 Rédaction cahier des charges">
+        <duration>1</duration>
+        <start>2026-05-05</start>
+        <depend id="2"/>
+      </task>
+      <task id="4" name="01.3 Création maquettes UI">
+        <duration>2</duration>
+        <start>2026-05-05</start>
+        <depend id="3"/>
+        <assignment resource-id="3"/>
+      </task>
+      <task id="5" name="01.4 Validation spécifications">
+        <duration>1</duration>
+        <start>2026-05-07</start>
+        <depend id="4"/>
+      </task>
+      <task id="6" name="01.5 Définition architecture technique">
+        <duration>1</duration>
+        <start>2026-05-05</start>
+        <depend id="2"/>
+      </task>
+    </task>
+
+    <!-- JALON 1 -->
+    <task id="7" name="🏁 JALON: Spécifications validées" milestone="true">
+      <duration>1</duration>
+      <start>2026-05-07</start>
+      <depend id="5"/>
+    </task>
+
+    <!-- ========== PHASE 2: ENVIRONNEMENT (6-9 mai 2026) ========== -->
+    <task id="8" name="02. PHASE 2: ENVIRONNEMENT TECHNIQUE">
+      <task id="9" name="02.1 Installation PostgreSQL">
+        <duration>1</duration>
+        <start>2026-05-06</start>
+      </task>
+      <task id="10" name="02.2 Configuration base données">
+        <duration>1</duration>
+        <start>2026-05-07</start>
+        <depend id="9"/>
+      </task>
+      <task id="11" name="02.3 Installation Python + venv">
+        <duration>1</duration>
+        <start>2026-05-06</start>
+      </task>
+      <task id="12" name="02.4 Installation Django/Flask">
+        <duration>1</duration>
+        <start>2026-05-07</start>
+        <depend id="11"/>
+      </task>
+      <task id="13" name="02.5 Installation Node.js/npm">
+        <duration>1</duration>
+        <start>2026-05-06</start>
+      </task>
+      <task id="14" name="02.6 Initialisation projet React">
+        <duration>1</duration>
+        <start>2026-05-07</start>
+        <depend id="13"/>
+      </task>
+      <task id="15" name="02.7 Configuration Tailwind CSS">
+        <duration>1</duration>
+        <start>2026-05-08</start>
+        <depend id="14"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 3: BACKEND AUTH (9-14 mai 2026) ========== -->
+    <task id="16" name="03. PHASE 3: BACKEND AUTHENTIFICATION">
+      <task id="17" name="03.1 Modèle User">
+        <duration>1</duration>
+        <start>2026-05-09</start>
+        <depend id="10"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="18" name="03.2 API Login/Logout">
+        <duration>1</duration>
+        <start>2026-05-10</start>
+        <depend id="17"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="19" name="03.3 JWT Token">
+        <duration>1</duration>
+        <start>2026-05-11</start>
+        <depend id="18"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="20" name="03.4 Middleware authentification">
+        <duration>1</duration>
+        <start>2026-05-12</start>
+        <depend id="19"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="21" name="03.5 Gestion des rôles">
+        <duration>1</duration>
+        <start>2026-05-12</start>
+        <depend id="17"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="22" name="03.6 Tests authentification">
+        <duration>1</duration>
+        <start>2026-05-13</start>
+        <depend id="20"/>
+        <depend id="21"/>
+        <assignment resource-id="4"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 4: BACKEND USERS (13-17 mai 2026) ========== -->
+    <task id="23" name="04. PHASE 4: BACKEND UTILISATEURS">
+      <task id="24" name="04.1 Modèle Utilisateur complet">
+        <duration>1</duration>
+        <start>2026-05-13</start>
+        <depend id="17"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="25" name="04.2 API CRUD utilisateurs">
+        <duration>2</duration>
+        <start>2026-05-14</start>
+        <depend id="24"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="26" name="04.3 Middleware permissions">
+        <duration>1</duration>
+        <start>2026-05-16</start>
+        <depend id="25"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="27" name="04.4 Pagination et filtres">
+        <duration>1</duration>
+        <start>2026-05-16</start>
+        <depend id="25"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="28" name="04.5 Tests utilisateurs">
+        <duration>1</duration>
+        <start>2026-05-17</start>
+        <depend id="25"/>
+        <depend id="26"/>
+        <assignment resource-id="4"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 5: BACKEND DEVISES (16-20 mai 2026) ========== -->
+    <task id="29" name="05. PHASE 5: BACKEND DEVISES">
+      <task id="30" name="05.1 Modèle Devises">
+        <duration>1</duration>
+        <start>2026-05-16</start>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="31" name="05.2 API CRUD devises">
+        <duration>1</duration>
+        <start>2026-05-17</start>
+        <depend id="30"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="32" name="05.3 Modèle Taux de change">
+        <duration>1</duration>
+        <start>2026-05-17</start>
+        <depend id="30"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="33" name="05.4 API Taux de change">
+        <duration>2</duration>
+        <start>2026-05-18</start>
+        <depend id="32"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="34" name="05.5 Calcul du spread">
+        <duration>1</duration>
+        <start>2026-05-20</start>
+        <depend id="33"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="35" name="05.6 API mise à jour auto">
+        <duration>1</duration>
+        <start>2026-05-20</start>
+        <depend id="33"/>
+        <assignment resource-id="1"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 6: BACKEND TRANSACTIONS (19-23 mai 2026) ========== -->
+    <task id="36" name="06. PHASE 6: BACKEND TRANSACTIONS">
+      <task id="37" name="06.1 Modèle Transaction">
+        <duration>1</duration>
+        <start>2026-05-19</start>
+        <depend id="24"/>
+        <depend id="30"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="38" name="06.2 API CRUD transactions">
+        <duration>2</duration>
+        <start>2026-05-20</start>
+        <depend id="37"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="39" name="06.3 Calcul montant avec taux">
+        <duration>1</duration>
+        <start>2026-05-22</start>
+        <depend id="38"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="40" name="06.4 Génération ID transaction">
+        <duration>1</duration>
+        <start>2026-05-22</start>
+        <depend id="38"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="41" name="06.5 Historique transactions">
+        <duration>1</duration>
+        <start>2026-05-23</start>
+        <depend id="38"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="42" name="06.6 Tests transactions">
+        <duration>1</duration>
+        <start>2026-05-23</start>
+        <depend id="38"/>
+        <assignment resource-id="4"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 7: BACKEND NOTIFICATIONS (22-26 mai 2026) ========== -->
+    <task id="43" name="07. PHASE 7: BACKEND NOTIFICATIONS">
+      <task id="44" name="07.1 Modèle Notifications">
+        <duration>1</duration>
+        <start>2026-05-22</start>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="45" name="07.2 API Notifications">
+        <duration>1</duration>
+        <start>2026-05-23</start>
+        <depend id="44"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="46" name="07.3 Génération rapports CSV">
+        <duration>1</duration>
+        <start>2026-05-24</start>
+        <depend id="38"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="47" name="07.4 Génération rapports PDF">
+        <duration>2</duration>
+        <start>2026-05-24</start>
+        <depend id="38"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="48" name="07.5 API Statistiques dashboard">
+        <duration>1</duration>
+        <start>2026-05-25</start>
+        <depend id="38"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="49" name="07.6 Journal d'audit">
+        <duration>1</duration>
+        <start>2026-05-26</start>
+        <depend id="38"/>
+        <assignment resource-id="1"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 8: BACKEND PARAMÈTRES (25-27 mai 2026) ========== -->
+    <task id="50" name="08. PHASE 8: BACKEND PARAMÈTRES">
+      <task id="51" name="08.1 Modèle Paramètres">
+        <duration>1</duration>
+        <start>2026-05-25</start>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="52" name="08.2 API Configuration">
+        <duration>1</duration>
+        <start>2026-05-26</start>
+        <depend id="51"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="53" name="08.3 Logging système">
+        <duration>1</duration>
+        <start>2026-05-26</start>
+        <depend id="52"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="54" name="08.4 Gestion des erreurs">
+        <duration>1</duration>
+        <start>2026-05-27</start>
+        <assignment resource-id="1"/>
+      </task>
+    </task>
+
+    <!-- JALON BACKEND -->
+    <task id="55" name="🏁 JALON: Backend API terminé" milestone="true">
+      <duration>1</duration>
+      <start>2026-05-27</start>
+      <depend id="54"/>
+    </task>
+
+    <!-- ========== PHASE 9: FRONTEND AUTH (27-31 mai 2026) ========== -->
+    <task id="56" name="09. PHASE 9: FRONTEND AUTHENTIFICATION">
+      <task id="57" name="09.1 Page de connexion">
+        <duration>1</duration>
+        <start>2026-05-27</start>
+        <depend id="14"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="58" name="09.2 Context Authentification">
+        <duration>1</duration>
+        <start>2026-05-28</start>
+        <depend id="57"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="59" name="09.3 Routes protégées">
+        <duration>1</duration>
+        <start>2026-05-29</start>
+        <depend id="58"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="60" name="09.4 Gestion des rôles UI">
+        <duration>1</duration>
+        <start>2026-05-29</start>
+        <depend id="59"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="61" name="09.5 Persistance session">
+        <duration>1</duration>
+        <start>2026-05-30</start>
+        <depend id="58"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 10: FRONTEND LAYOUT (30 mai - 3 juin 2026) ========== -->
+    <task id="62" name="10. PHASE 10: FRONTEND LAYOUT">
+      <task id="63" name="10.1 Layout principal">
+        <duration>1</duration>
+        <start>2026-05-30</start>
+        <depend id="59"/>
+        <assignment resource-id="2"/>
+        <assignment resource-id="3"/>
+      </task>
+      <task id="64" name="10.2 Sidebar avec menu">
+        <duration>1</duration>
+        <start>2026-05-31</start>
+        <depend id="63"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="65" name="10.3 Header utilisateur">
+        <duration>1</duration>
+        <start>2026-06-01</start>
+        <depend id="63"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="66" name="10.4 Mode sombre/clair">
+        <duration>1</duration>
+        <start>2026-06-02</start>
+        <depend id="63"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="67" name="10.5 Responsive design">
+        <duration>1</duration>
+        <start>2026-06-02</start>
+        <depend id="63"/>
+        <assignment resource-id="2"/>
+        <assignment resource-id="3"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 11: FRONTEND DASHBOARD (2-5 juin 2026) ========== -->
+    <task id="68" name="11. PHASE 11: FRONTEND DASHBOARD">
+      <task id="69" name="11.1 Composant KPIs">
+        <duration>1</duration>
+        <start>2026-06-02</start>
+        <depend id="63"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="70" name="11.2 Graphiques Recharts">
+        <duration>2</duration>
+        <start>2026-06-02</start>
+        <depend id="63"/>
+        <depend id="48"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="71" name="11.3 Transactions récentes">
+        <duration>1</duration>
+        <start>2026-06-03</start>
+        <depend id="63"/>
+        <depend id="38"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="72" name="11.4 Taux du jour">
+        <duration>1</duration>
+        <start>2026-06-04</start>
+        <depend id="63"/>
+        <depend id="33"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="73" name="11.5 Auto-refresh données">
+        <duration>1</duration>
+        <start>2026-06-05</start>
+        <depend id="70"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 12: FRONTEND USERS (3-7 juin 2026) ========== -->
+    <task id="74" name="12. PHASE 12: FRONTEND UTILISATEURS">
+      <task id="75" name="12.1 Liste utilisateurs">
+        <duration>1</duration>
+        <start>2026-06-03</start>
+        <depend id="63"/>
+        <depend id="25"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="76" name="12.2 Filtres et recherche">
+        <duration>1</duration>
+        <start>2026-06-04</start>
+        <depend id="75"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="77" name="12.3 Modal ajout utilisateur">
+        <duration>1</duration>
+        <start>2026-06-04</start>
+        <depend id="25"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="78" name="12.4 Modal modification">
+        <duration>1</duration>
+        <start>2026-06-05</start>
+        <depend id="25"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="79" name="12.5 Activation/Désactivation">
+        <duration>1</duration>
+        <start>2026-06-05</start>
+        <depend id="75"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="80" name="12.6 Pagination">
+        <duration>1</duration>
+        <start>2026-06-06</start>
+        <depend id="75"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 13: FRONTEND DEVISES (5-9 juin 2026) ========== -->
+    <task id="81" name="13. PHASE 13: FRONTEND DEVISES">
+      <task id="82" name="13.1 Liste devises">
+        <duration>1</duration>
+        <start>2026-06-05</start>
+        <depend id="63"/>
+        <depend id="31"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="83" name="13.2 Liste taux de change">
+        <duration>1</duration>
+        <start>2026-06-06</start>
+        <depend id="63"/>
+        <depend id="33"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="84" name="13.3 Cartes interactives">
+        <duration>1</duration>
+        <start>2026-06-07</start>
+        <depend id="83"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="85" name="13.4 Modal détails taux">
+        <duration>1</duration>
+        <start>2026-06-08</start>
+        <depend id="84"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="86" name="13.5 Mise à jour temps réel">
+        <duration>1</duration>
+        <start>2026-06-08</start>
+        <depend id="83"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 14: FRONTEND TRANSACTIONS (6-11 juin 2026) ========== -->
+    <task id="87" name="14. PHASE 14: FRONTEND TRANSACTIONS">
+      <task id="88" name="14.1 Liste transactions">
+        <duration>1</duration>
+        <start>2026-06-06</start>
+        <depend id="63"/>
+        <depend id="38"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="89" name="14.2 Filtres avancés">
+        <duration>1</duration>
+        <start>2026-06-07</start>
+        <depend id="88"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="90" name="14.3 Formulaire création">
+        <duration>2</duration>
+        <start>2026-06-07</start>
+        <depend id="88"/>
+        <depend id="38"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="91" name="14.4 Validation formulaire">
+        <duration>1</duration>
+        <start>2026-06-09</start>
+        <depend id="90"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="92" name="14.5 Modal détails">
+        <duration>1</duration>
+        <start>2026-06-09</start>
+        <depend id="88"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="93" name="14.6 Export CSV">
+        <duration>1</duration>
+        <start>2026-06-10</start>
+        <depend id="88"/>
+        <depend id="46"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="94" name="14.7 Export PDF facture">
+        <duration>1</duration>
+        <start>2026-06-10</start>
+        <depend id="88"/>
+        <depend id="47"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 15: FRONTEND RAPPORTS (9-12 juin 2026) ========== -->
+    <task id="95" name="15. PHASE 15: FRONTEND RAPPORTS">
+      <task id="96" name="15.1 Composant rapports">
+        <duration>1</duration>
+        <start>2026-06-09</start>
+        <depend id="63"/>
+        <depend id="46"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="97" name="15.2 Filtres rapports">
+        <duration>1</duration>
+        <start>2026-06-10</start>
+        <depend id="96"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="98" name="15.3 Export CSV">
+        <duration>1</duration>
+        <start>2026-06-10</start>
+        <depend id="96"/>
+        <depend id="46"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="99" name="15.4 Export PDF jsPDF">
+        <duration>1</duration>
+        <start>2026-06-11</start>
+        <depend id="96"/>
+        <depend id="47"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="100" name="15.5 Graphiques stats">
+        <duration>1</duration>
+        <start>2026-06-11</start>
+        <depend id="96"/>
+        <depend id="48"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 16: FRONTEND NOTIFICATIONS (10-13 juin 2026) ========== -->
+    <task id="101" name="16. PHASE 16: FRONTEND NOTIFICATIONS">
+      <task id="102" name="16.1 Composant cloche">
+        <duration>1</duration>
+        <start>2026-06-10</start>
+        <depend id="63"/>
+        <depend id="45"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="103" name="16.2 Liste notifications">
+        <duration>1</duration>
+        <start>2026-06-11</start>
+        <depend id="102"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="104" name="16.3 Marquer comme lu">
+        <duration>1</duration>
+        <start>2026-06-11</start>
+        <depend id="102"/>
+        <depend id="45"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="105" name="16.4 Notifications toast">
+        <duration>1</duration>
+        <start>2026-06-12</start>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="106" name="16.5 Sons notifications">
+        <duration>1</duration>
+        <start>2026-06-12</start>
+        <depend id="102"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 17: FRONTEND PARAMÈTRES (11-14 juin 2026) ========== -->
+    <task id="107" name="17. PHASE 17: FRONTEND PARAMÈTRES">
+      <task id="108" name="17.1 Page paramètres">
+        <duration>1</duration>
+        <start>2026-06-11</start>
+        <depend id="63"/>
+        <depend id="52"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="109" name="17.2 Context Settings global">
+        <duration>1</duration>
+        <start>2026-06-12</start>
+        <depend id="108"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="110" name="17.3 Application globale">
+        <duration>1</duration>
+        <start>2026-06-13</start>
+        <depend id="109"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- JALON FRONTEND -->
+    <task id="111" name="🏁 JALON: Frontend terminé" milestone="true">
+      <duration>1</duration>
+      <start>2026-06-14</start>
+      <depend id="110"/>
+    </task>
+
+    <!-- ========== PHASE 18: TESTS (14-20 juin 2026) ========== -->
+    <task id="112" name="18. PHASE 18: TESTS ET INTÉGRATION">
+      <task id="113" name="18.1 Tests unitaires backend">
+        <duration>2</duration>
+        <start>2026-06-14</start>
+        <depend id="54"/>
+        <assignment resource-id="4"/>
+      </task>
+      <task id="114" name="18.2 Tests unitaires frontend">
+        <duration>2</duration>
+        <start>2026-06-14</start>
+        <depend id="110"/>
+        <assignment resource-id="4"/>
+      </task>
+      <task id="115" name="18.3 Tests intégration API">
+        <duration>2</duration>
+        <start>2026-06-16</start>
+        <depend id="113"/>
+        <assignment resource-id="4"/>
+      </task>
+      <task id="116" name="18.4 Tests E2E Cypress">
+        <duration>2</duration>
+        <start>2026-06-18</start>
+        <depend id="115"/>
+        <assignment resource-id="4"/>
+      </task>
+      <task id="117" name="18.5 Tests de charge">
+        <duration>1</duration>
+        <start>2026-06-19</start>
+        <depend id="116"/>
+        <assignment resource-id="4"/>
+      </task>
+      <task id="118" name="18.6 Correction bugs">
+        <duration>1</duration>
+        <start>2026-06-19</start>
+        <depend id="117"/>
+        <assignment resource-id="1"/>
+        <assignment resource-id="2"/>
+        <assignment resource-id="4"/>
+      </task>
+    </task>
+
+    <!-- JALON TESTS -->
+    <task id="119" name="🏁 JALON: Tests validés" milestone="true">
+      <duration>1</duration>
+      <start>2026-06-20</start>
+      <depend id="118"/>
+    </task>
+
+    <!-- ========== PHASE 19: DÉPLOIEMENT (20-24 juin 2026) ========== -->
+    <task id="120" name="19. PHASE 19: DÉPLOIEMENT">
+      <task id="121" name="19.1 Build production">
+        <duration>1</duration>
+        <start>2026-06-20</start>
+        <depend id="118"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="122" name="19.2 Configuration serveur">
+        <duration>1</duration>
+        <start>2026-06-21</start>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="123" name="19.3 Déploiement backend">
+        <duration>1</duration>
+        <start>2026-06-22</start>
+        <depend id="122"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="124" name="19.4 Déploiement frontend">
+        <duration>1</duration>
+        <start>2026-06-22</start>
+        <depend id="122"/>
+        <depend id="121"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="125" name="19.5 Configuration HTTPS/SSL">
+        <duration>1</duration>
+        <start>2026-06-23</start>
+        <depend id="123"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="126" name="19.6 Backup base données">
+        <duration>1</duration>
+        <start>2026-06-23</start>
+        <depend id="123"/>
+        <assignment resource-id="1"/>
+      </task>
+      <task id="127" name="19.7 Monitoring et logging">
+        <duration>1</duration>
+        <start>2026-06-24</start>
+        <depend id="124"/>
+        <assignment resource-id="1"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- ========== PHASE 20: LIVRAISON (24-26 juin 2026) ========== -->
+    <task id="128" name="20. PHASE 20: LIVRAISON ET FORMATION">
+      <task id="129" name="20.1 Documentation technique">
+        <duration>1</duration>
+        <start>2026-06-24</start>
+        <depend id="127"/>
+        <assignment resource-id="1"/>
+        <assignment resource-id="2"/>
+      </task>
+      <task id="130" name="20.2 Documentation utilisateur">
+        <duration>1</duration>
+        <start>2026-06-25</start>
+        <depend id="127"/>
+        <assignment resource-id="5"/>
+      </task>
+      <task id="131" name="20.3 Formation administrateurs">
+        <duration>1</duration>
+        <start>2026-06-25</start>
+        <depend id="130"/>
+        <assignment resource-id="5"/>
+      </task>
+      <task id="132" name="20.4 Formation utilisateurs">
+        <duration>1</duration>
+        <start>2026-06-25</start>
+        <depend id="130"/>
+        <assignment resource-id="5"/>
+      </task>
+      <task id="133" name="20.5 Recette client">
+        <duration>1</duration>
+        <start>2026-06-26</start>
+        <depend id="131"/>
+        <depend id="132"/>
+        <assignment resource-id="5"/>
+      </task>
+      <task id="134" name="20.6 Mise en production">
+        <duration>1</duration>
+        <start>2026-06-26</start>
+        <depend id="133"/>
+        <assignment resource-id="1"/>
+        <assignment resource-id="2"/>
+      </task>
+    </task>
+
+    <!-- JALON FINAL -->
+    <task id="135" name="🎉 PROJET TERMINÉ - GO LIVE" milestone="true">
+      <duration>1</duration>
+      <start>2026-06-26</start>
+      <depend id="134"/>
+    </task>
+  </tasks>
+
+  <calendars>
+    <calendar id="1" name="Standard">
+      <week day="1" working="true"/>
+      <week day="2" working="true"/>
+      <week day="3" working="true"/>
+      <week day="4" working="true"/>
+      <week day="5" working="true"/>
+      <week day="6" working="false"/>
+      <week day="7" working="false"/>
+    </calendar>
+  </calendars>
+
+  <view>
+    <gantt-chart/>
+  </view>
+</project>
