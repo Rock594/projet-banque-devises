@@ -1,19 +1,60 @@
-# Python
-__pycache__/
-*.pyc
+# ============ ENVIRONNEMENTS VIRTUELS ============
 venv/
-.env
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Django
-db.sqlite3
-media/
-
-# React
+# ============ NODE_MODULES ============
 node_modules/
-build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
-# VS Code
+# ============ FICHIERS DE CONFIGURATION SENSIBLES ============
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ============ BDD ============
+*.sqlite3
+*.db
+*.sql
+db.sqlite3
+
+# ============ IDE / ÉDITEURS ============
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
 
-# Logs
+# ============ DOSSIERS DE BUILD ============
+build/
+dist/
 *.log
+logs/
+*.log
+*.pid
+*.seed
+
+# ============ OS ============
+.DS_Store
+Desktop.ini
+Thumbs.db
+*.tmp
+
+# ============ FICHIERS DE PROJET PERSONNELS ============
+*.gan
+*.pdf
+*.xlsx
+*.docx
