@@ -16,23 +16,23 @@ Permet la gestion complète des opérations de change, des utilisateurs et des r
 
 &#x20;Backend
 
-\- \*\*Framework\*\*: Flask
+Framework: Flask
 
-\- \*\*Base de données\*\*: PostgreSQL / SQLite (dev)
+Base de données: PostgreSQL / SQLite (dev)
 
-\- \*\*Authentification\*\*: JWT
+Authentification: JWT
 
 
 
 &#x20;Frontend
 
-\- \*\*Framework\*\*: React 18
+Framework: React 18
 
-\- \*\*Styling\*\*: Tailwind CSS
+Styling: Tailwind CSS
 
-\- \*\*Graphiques\*\*: Recharts
+Graphiques: Recharts
 
-\- \*\*PDF\*\*: jsPDF
+PDF: jsPDF
 
 
 
